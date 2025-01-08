@@ -18,14 +18,15 @@
     </style>
 </head>
 <body>
-    <h1 class="text">Do you have GirlFriend?</h1>
+    <h1 id="textchange" class="text">Do you have GirlFriend?</h1>
     <div style="text-align: center;">
         <button class="yes-button" onclick="handleYes()">Yes</button>
         <button class="no-button" onclick="handleNo()">No</button>
     </div>
     <script>
         function handleYes() {
-            alert('It\'s haram!');
+            const textchange= document.getElmentById('textchange');
+            textchange.innerText="It's Haram"
         }
 
         function handleNo() {

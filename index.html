@@ -15,14 +15,13 @@
         .yes-button {
             font-size: 20px;
         }
-        
     </style>
 </head>
 <body>
     <h1 class="text">Do you have GirlFriend?</h1>
     <div style="text-align: center;">
         <button class="yes-button" onclick="handleYes()">Yes</button>
-        <button onclick="handleNo()">No</button>
+        <button class="no-button" onclick="handleNo()">No</button>
     </div>
     <script>
         function handleYes() {
@@ -31,7 +30,12 @@
 
         function handleNo() {
             const yesButton = document.querySelector('.yes-button');
-            yesButton.style.fontSize = parseInt(window.getComputedStyle(yesButton).fontSize) + 100 + 'px';
+            const noButton = document.querySelector('.no-button');
+            const newSize = parseInt(window.getComputedStyle(yesButton).fontSize) + 100;
+            yesButton.style.fontSize = newSize + 'px';
+            if (newSize > 1000) {
+                noButton.style.display = 'none';
+            }
         }
     </script>
 </body>

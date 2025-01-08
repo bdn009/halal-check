@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text {
+            color: red;
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 200px;
+        }
+        .yes-button {
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="text">Do you have GirlFriend?</h1>
+    <div style="text-align: center;">
+        <button class="yes-button" onclick="handleYes()">Yes</button>
+        <button onclick="handleNo()">No</button>
+    </div>
+    <script>
+        function handleYes() {
+            alert('It\'s haram!');
+        }
+
+        function handleNo() {
+            const yesButton = document.querySelector('.yes-button');
+            yesButton.style.fontSize = parseInt(window.getComputedStyle(yesButton).fontSize) + 100 + 'px';
+        }
+    </script>
+</body>
+</html>
